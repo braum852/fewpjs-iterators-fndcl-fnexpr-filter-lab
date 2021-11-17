@@ -1,15 +1,15 @@
-function findMatching (property, value) {
-    return property.filter(possibleMatch =>
+function findMatching (drivers, value) {
+    return drivers.filter(possibleMatch =>
         possibleMatch.toLowerCase() === value.toLowerCase()
       )
 }
 
-function fuzzyMatch(property, value) {
-    return property.filter( possibleMatch =>
+function fuzzyMatch(drivers, value) {
+    return drivers.filter( possibleMatch =>
       possibleMatch.toLowerCase().indexOf(value.toLowerCase()) === 0
     )
   }
 
-  function matchName(property, value) {
-    return property.filter( record => record.name === value)
+  function matchName(drivers, value) {
+    return drivers.filter( record => record.name === value)
   }
